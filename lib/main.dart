@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gym/design-system/tokens/colors.dart';
 import 'package:gym/widgets/banner_card.dart';
+import 'package:gym/widgets/avatar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +25,20 @@ class MyApp extends StatelessWidget {
             padding: const EdgeInsets.all(24),
             child: SingleChildScrollView(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const Avatar(),
+                  const SizedBox(height: 32),
+                  Text(
+                    'Ready to run?',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.black,
+                    ),
+                  ),
+                  const SizedBox(height: 32),
                   Row(
                     children: [
                       BannerCard(
